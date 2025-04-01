@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {StripePaymentComponent} from './features/stripe-payment/stripe-payment.component';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
+  imports: [CommonModule,StripePaymentComponent],
+  //templateUrl: './app.component.html',
+  template: `<app-stripe-payment></app-stripe-payment>`,
+  standalone: true,
   styleUrl: './app.component.css'
 })
 export class AppComponent {
